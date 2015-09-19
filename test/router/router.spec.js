@@ -18,15 +18,16 @@ describe('routes', function(){
         $scope = $rootScope.$new();
     }));
 
-    it('should load the tableView.html template', function(){
-        $httpBackend.whenGET('app/features/table/tableView.html').respond('');
+    it('should load the gameView.html template', function(){
+        $httpBackend.whenGET('app/features/game/gameView.html').respond('');
+        $httpBackend.whenGET('app/features/main/mainView.html').respond('');
         $httpBackend.flush();
 
-        $state.transitionTo('table');
-
-        expect($state.current.name).toBe('table');
-        expect($state.current.templateUrl).toBe('app/features/table/tableView.html');
-        expect($state.current.controller).toBe('TableController');
+        $state.transitionTo('games',{player:1});
+        
+        expect($state.current.name).toBe('games');
+        expect($state.current.templateUrl).toBe('app/features/game/gameView.html');
+        expect($state.current.controller).toBe('GameController');
     });
 
 });

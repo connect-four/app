@@ -17,12 +17,11 @@ describe('TableController', function () {
     });
   });
 
-  it('Should identify at least one team', function() {
+  it('Should identify the $scope', function() {
     inject(function($controller) {
-      $controller('TableController', {'$scope': $scope});
-      $httpBackend.flush();
+      $controller('GameController', {'$scope': $scope});
 
-      expect($scope.teams["1"]).toBeDefined();
+      expect($scope).toBeDefined();
     });
   });
 

@@ -1,0 +1,26 @@
+*:focus {
+    outline: none;
+}
+[layout="column"] > [fill] {
+    width: 100%;
+}
+[layout="row"] > [fill] {
+    width: 100%;
+}
+md-icon{
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+}

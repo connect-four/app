@@ -1,0 +1,24 @@
+<div class=" w-512" layout="column">
+
+<div class="m-t-16" fill>
+    <span ng-if="!winner" class="s-150 bold">
+        <span ng-if="myTurn" class="s-150 bold color-black">
+            Your turn
+        </span>
+        <span ng-if="!myTurn" class="s-150 bold color-black">
+            Opponent's turn
+        </span>
+    </span>
+    <span ng-if="winner" class="s-150 bold color-{{player}}">Player {{player}} is the winner !</span>
+</div>
+
+<div fill class="md-whiteframe-z1 m-v-16 bg-blue-9 p-4" layout="column"  layout-align="start start" layout-wrap>
+    <div ng-repeat="row in board track by $index" layout="row"  layout-align="start start">
+        <div ng-repeat="col in row track by $index" layout="row"  layout-align="start start">
+            <md-icon ng-show="!canPlay($parent.$index, $index)" class="color-{{col}} f-s-72">brightness_1</md-icon>
+            <md-icon ng-show="canPlay($parent.$index, $index)" ng-click="play($parent.$index, $index)" class="color-{{col}} pointer f-s-72">brightness_1</md-icon>
+        </div>
+    </div>
+</div>
+
+</div>

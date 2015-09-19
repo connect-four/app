@@ -1,0 +1,88 @@
+﻿<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="pt-br" http-equiv="content-language" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="Connect Four" name="description" />
+    <meta content="Thiago Kroger" name="author"/>
+    <meta content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" name="viewport">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <title>Connect FOur</title>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- run `gulp wiredep` to automaticaly populate bower styles dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- inject:css -->
+    <!-- css files will be automaticaly insert here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+</head>
+
+<body ng-app="MyApp">
+
+<!-- Main -->
+<main class="fill bg-grey-3 scrollable" id="container" layout="column" layout-align="start" layout-wrap  style="display:none" >
+    <div class="bg-black h-64 p-16 color-white md-whiteframe-z1" layout="row" layout-align="center center" fill>
+        <div class="m-h-16 w-512" layout="row" layout-align="start center">
+            <div  layout="row" layout-align="start center" flex>
+                <div>
+                    <img src="http://appcrawlr.com/thumbs/app/icon/35/1554035.png" class="w-48">
+                </div>
+                <div layout="column" class="m-l-16 ">
+                    <div class="s-150"> Connect Four Multiplayer Game</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div flex fill ui-view="" layout="row" layout-align="center" ></div>
+</main>
+<!-- Main -->
+
+<!-- Loading App -->
+<div class="fill bg-grey-3" id="loading-app" layout="row" layout-align="center center">
+    <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+</div>
+<!-- Loading App -->
+
+<!-- Overlay Loading -->
+<div class="loading-overlay" style="display:none;"></div>
+<!-- Overlay Loading -->
+
+<!-- Server Error -->
+<div class="fill bg-grey-3" id="server-error" layout="row" layout-align="center center">
+    <div class="bg-white p-32 md-whiteframe-z1 s-150" layout="row" layout-align="center center">
+        Service unavailable, please try again later.
+    </div>
+</div>
+<!-- Server Error -->
+
+
+<!-- build:js(src) scripts/vendor.js -->
+<!-- bower:js -->
+<!-- run `gulp wiredep` to automaticaly populate bower script dependencies -->
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+<!-- inject:js -->
+<!-- js files will be automaticaly insert here -->
+<!-- endinject -->
+
+<!-- inject:partials -->
+<!-- angular templates will be automatically converted in js and inserted here -->
+<!-- endinject -->
+<!-- endbuild -->
+</body>
+</html>
